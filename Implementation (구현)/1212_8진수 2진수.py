@@ -9,4 +9,22 @@
 첫째 줄에 주어진 수를 2진수로 변환하여 출력한다. 수가 0인 경우를 제외하고는 반드시 1로 시작해야 한다.
 """
 
-n=input()
+"""
+#10진수 -> 2진수: format(숫자,'b')
+#10진수 -> 8진수: format(숫자,'o')
+#10진수 -> 16진수: format(숫자,'x')
+#n진수 -> 10진수: int(숫자,n)
+n=int(input())
+b=format(n,'b')
+o=format(n,'o')
+x=format(n,'x')
+print(b,o,x)
+print(int(b,2),int(o,8),int(x,16))
+"""
+
+#8진수->10진수
+x=int(input(),8)
+#10진수->2진수
+x=format(x,'b')
+
+print(x)
