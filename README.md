@@ -11,6 +11,7 @@
 코딩테스트 고득점 kit: https://school.programmers.co.kr/learn/challenges?tab=algorithm_practice_kit <br/>
 SQL 고득점 Kit: https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit <br/>
 이것이 코딩 테스트다 with 파이썬: http://www.yes24.com/Product/Goods/91433923 <br/>
+백준 단계별로 풀어보기: https://www.acmicpc.net/step <br/>
 
 # 목표
 금융공기업
