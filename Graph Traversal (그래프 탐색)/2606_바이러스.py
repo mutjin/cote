@@ -15,3 +15,20 @@
 1번 컴퓨터가 웜 바이러스에 걸렸을 때, 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수를 첫째 줄에 출력한다.
 """
 
+n=int(input())
+e=int(input())
+graph=[[] for _ in range(n+1)]
+visited=[0]*(n+1)
+for _ in range(e):
+    a,b=map(int,input().split())
+    graph[a].append(b)
+    graph[b].append(a)
+
+def dfs(n):
+    visited[n]=1
+    for i in graph[n]:
+        if visited[i]==0:
+            dfs(i)
+
+dfs(1)
+print(sum(visited)-1)

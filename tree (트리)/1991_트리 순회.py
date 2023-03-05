@@ -17,6 +17,37 @@
 출력
 첫째 줄에 전위 순회, 둘째 줄에 중위 순회, 셋째 줄에 후위 순회한 결과를 출력한다. 각 줄에 N개의 알파벳을 공백 없이 출력하면 된다.
 """
+n=int(input())
+trees={}
+for _ in range(n):
+    a,b,c=input().split()
+    trees[a]=[b,c]
 
+#전위순회: 루트->왼->오
+def preorder(v):
+    if v!='.':
+        print(v,end="")
+        preorder(trees[v][0])
+        preorder(trees[v][1])
 
+#중위순회: 왼->루트->오
+def inorder(v):
+    if v!='.':
+        inorder(trees[v][0])
+        print(v,end="")
+        inorder(trees[v][1])
 
+#후위순회: 왼->오->루트
+def postorder(v):
+    if v!=".":
+        postorder(trees[v][0])
+        postorder(trees[v][1])
+        print(v,end="")
+
+preorder('A')
+print()
+inorder('A')
+print()
+postorder('A')
+print()
+        
