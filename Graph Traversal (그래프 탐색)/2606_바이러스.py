@@ -17,18 +17,22 @@
 
 n=int(input())
 e=int(input())
-graph=[[] for _ in range(n+1)]
+graph=[[] for _ in range(n+1)] 
 visited=[0]*(n+1)
+ans=0
+
 for _ in range(e):
     a,b=map(int,input().split())
     graph[a].append(b)
     graph[b].append(a)
 
-def dfs(n):
-    visited[n]=1
-    for i in graph[n]:
-        if visited[i]==0:
+def dfs(v):
+    global ans
+    visited[v]=1
+    for i in graph[v]:
+        if not visited[i]:
+            ans+=1
             dfs(i)
 
 dfs(1)
-print(sum(visited)-1)
+print(ans)
